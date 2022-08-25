@@ -28,7 +28,7 @@ class SchoolVCViewModel {
             if let error = error {
                 self.errorMessage = error.localizedDescription
             }
-            self.scores = fetchedScores.filter { $0.id != self.school.id }
+            self.scores = fetchedScores.filter { $0.id == self.school.id }
             print(self.scores)
         }
     }

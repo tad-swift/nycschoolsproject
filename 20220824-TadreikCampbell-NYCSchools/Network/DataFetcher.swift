@@ -69,9 +69,9 @@ class DataFetcher {
                     var scores: [SATScore] = []
                     for score in json {
                         let newScore = SATScore(
-                            math: score["sat_math_avg_score"] as? String,
-                            reading: score["sat_critical_reading_avg_score"] as? String,
-                            writing: score["sat_writing_avg_score"] as? String,
+                            math: score["sat_math_avg_score"] as? String ?? "No score",
+                            reading: score["sat_critical_reading_avg_score"] as? String ?? "No Score",
+                            writing: score["sat_writing_avg_score"] as? String ?? "No Score",
                             id: score["dbn"] as! String)
                         scores.append(newScore)
                     }

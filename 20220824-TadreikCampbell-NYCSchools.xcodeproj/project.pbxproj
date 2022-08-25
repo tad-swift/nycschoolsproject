@@ -30,6 +30,8 @@
 		455EAEEA28B7AD2C004231E9 /* SchoolCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEE928B7AD2C004231E9 /* SchoolCellViewModel.swift */; };
 		455EAEEC28B7B529004231E9 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEEB28B7B529004231E9 /* APIKeys.swift */; };
 		455EAEF028B7C7FD004231E9 /* Query+APIDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEEF28B7C7FD004231E9 /* Query+APIDefaults.swift */; };
+		455EAEF228B825FF004231E9 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF128B825FF004231E9 /* ScoreCell.swift */; };
+		455EAEF428B82654004231E9 /* ScoreCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF328B82654004231E9 /* ScoreCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		455EAEE928B7AD2C004231E9 /* SchoolCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCellViewModel.swift; sourceTree = "<group>"; };
 		455EAEEB28B7B529004231E9 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		455EAEEF28B7C7FD004231E9 /* Query+APIDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query+APIDefaults.swift"; sourceTree = "<group>"; };
+		455EAEF128B825FF004231E9 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		455EAEF328B82654004231E9 /* ScoreCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,8 @@
 			children = (
 				455EAEE728B7ACF2004231E9 /* SchoolCollectionViewCell.swift */,
 				455EAEE928B7AD2C004231E9 /* SchoolCellViewModel.swift */,
+				455EAEF128B825FF004231E9 /* ScoreCell.swift */,
+				455EAEF328B82654004231E9 /* ScoreCellViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,9 +373,11 @@
 				455EAE9E28B6FAE5004231E9 /* HomeViewController.swift in Sources */,
 				455EAEDB28B7334A004231E9 /* DataFetcher.swift in Sources */,
 				455EAEDF28B7AAF6004231E9 /* Navigator.swift in Sources */,
+				455EAEF428B82654004231E9 /* ScoreCellViewModel.swift in Sources */,
 				455EAEE328B7AB66004231E9 /* SchoolVCViewModel.swift in Sources */,
 				455EAEDD28B73485004231E9 /* SchoolQueryBuilder.swift in Sources */,
 				455EAEE128B7AB48004231E9 /* SchoolVC.swift in Sources */,
+				455EAEF228B825FF004231E9 /* ScoreCell.swift in Sources */,
 				455EAEEC28B7B529004231E9 /* APIKeys.swift in Sources */,
 				455EAED928B72D18004231E9 /* Extensions.swift in Sources */,
 				455EAEE528B7AB80004231E9 /* HomeViewModel.swift in Sources */,

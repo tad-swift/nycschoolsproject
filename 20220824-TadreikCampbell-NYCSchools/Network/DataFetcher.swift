@@ -50,20 +50,34 @@ class DataFetcher {
         }).resume()
     }
     
-    func getScores<AnyQuery: Query>(query: AnyQuery, completion: @escaping (SATScore?, Error?) -> Void) {
+    func getScores<AnyQuery: Query>(query: AnyQuery, completion: @escaping ([SATScore], Error?) -> Void) {
         var request = URLRequest(url: query.url)
         request.addValue(APIKeys.appToken, forHTTPHeaderField: "X-App-Token")
         URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
             if let error = error {
-                completion(nil, error)
+                completion([], error)
                 return
             }
+            
             if let data = data {
                 do {
-                    let score = try JSONDecoder().decode(SATScore.self, from: data)
-                    completion(score, nil)
+//                    let score = try JSONDecoder().decode(SATScore.self, from: data)
+                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String:Any]] else {
+                        completion([], NSError(domain: "decode failed", code: 0))
+                        return
+                    }
+                    var scores: [SATScore] = []
+                    for score in json {
+                        let newScore = SATScore(
+                            math: score["sat_math_avg_score"] as? String,
+                            reading: score["sat_critical_reading_avg_score"] as? String,
+                            writing: score["sat_writing_avg_score"] as? String,
+                            id: score["dbn"] as! String)
+                        scores.append(newScore)
+                    }
+                    completion(scores, nil)
                 } catch {
-                    completion(nil, error)
+                    completion([], error)
                 }
                 return
             }

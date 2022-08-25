@@ -59,10 +59,11 @@ extension HomeViewController: UICollectionViewDelegate {
     }
     
     // infinite scrolling. Better user experience than using PrefetchDataSource
+    // since we already have the entire dataset, this is commented out
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.item >= viewModel.schools.count - 3 {
-            viewModel.fetchNextSchools()
-        }
+//        if indexPath.item >= viewModel.schools.count - 3 {
+//            viewModel.fetchNextSchools()
+//        }
     }
 }
 

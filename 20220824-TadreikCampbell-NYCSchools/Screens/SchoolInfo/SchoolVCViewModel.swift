@@ -11,15 +11,26 @@ class SchoolVCViewModel {
     
     var school: School
     
-    @Published var schoolName = ""
-    @Published var scores: [Int] = []
+    var schoolName = ""
+    @Published var scores: [SATScore] = []
+    @Published var errorMessage = ""
     
     init(school: School) {
         self.school = school
-        self.schoolName = school.name ?? ""
+        getScores()
     }
     
     // func to fetch scores
-    
+    func getScores() {
+        let query = SchoolQuery().fetchScores(forSchoolWithDBN: school.id)
+        DataFetcher.shared.getScores(query: query) { [weak self] fetchedScores, error in
+            guard let self = self else { return }
+            if let error = error {
+                self.errorMessage = error.localizedDescription
+            }
+            self.scores = fetchedScores.filter { $0.id != self.school.id }
+            print(self.scores)
+        }
+    }
     
 }

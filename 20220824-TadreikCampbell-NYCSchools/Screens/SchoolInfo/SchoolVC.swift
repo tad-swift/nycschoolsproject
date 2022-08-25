@@ -12,10 +12,13 @@ import Combine
 
 final class SchoolVC: UIViewController {
     
-    let schoolNameLbl: UILabel = {
-        let v = UILabel()
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.bounds.width, height: 150)
+        layout.minimumInteritemSpacing = 10
+        let v = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.font = .systemFont(ofSize: 20, weight: .medium)
+        v.backgroundColor = .systemGroupedBackground
         return v
     }()
     
@@ -39,27 +42,36 @@ final class SchoolVC: UIViewController {
     
     private func setupViews() {
         view.backgroundColor = .systemBackground
-        title = viewModel.schoolName
-        
-        NSLayoutConstraint.activate([
-            
-        ])
+        title = "Scores"
+        view.addSubview(collectionView)
+        collectionView.register(ScoreCell.self, forCellWithReuseIdentifier: ScoreCell.reuseID)
+        collectionView.dataSource = self
     }
     
     private func setupObservers() {
-        viewModel.$schoolName
+        viewModel.$scores
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] in
-                self?.schoolNameLbl.text = $0
+            .sink { [weak self] _ in
+                self?.collectionView.reloadData()
             }
             .store(in: &observers)
-        
-//        viewModel.$scores
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] in
-//
-//            }
-//            .store(in: &observers)
+    }
+    
+}
+
+// MARK: - CollectionView Datasource
+extension SchoolVC: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.scores.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let scoreCell = collectionView.dequeueReusableCell(withReuseIdentifier: ScoreCell.reuseID, for: indexPath) as! ScoreCell
+        if let score = viewModel.scores[safe: indexPath.item] {
+            scoreCell.viewModel = ScoreCellViewModel(score: score)
+        }
+        return scoreCell
     }
     
 }

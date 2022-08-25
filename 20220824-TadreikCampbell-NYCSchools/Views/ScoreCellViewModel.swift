@@ -9,14 +9,14 @@ import Foundation
 
 class ScoreCellViewModel {
     
-    var score: SATScore
-    
     @Published var reading = ""
     @Published var writing = ""
     @Published var math = ""
     
     init(score: SATScore) {
-        self.score = score
+        reading = score.reading ?? "No reading score"
+        writing = score.writing ?? "No writing score"
+        math = score.math ?? "No math score"
     }
     
 }

@@ -14,7 +14,7 @@ final class SchoolVC: UIViewController {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: view.bounds.width, height: 150)
+        layout.itemSize = CGSize(width: view.bounds.width, height: 100)
         layout.minimumInteritemSpacing = 10
         let v = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         v.translatesAutoresizingMaskIntoConstraints = false

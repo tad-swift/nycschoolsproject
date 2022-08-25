@@ -64,7 +64,8 @@ class ScoreCell: UICollectionViewCell {
             
             mathLbl.topAnchor.constraint(equalTo: writingLbl.bottomAnchor, constant: 8),
             mathLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            mathLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
+            mathLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            mathLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
     }
     

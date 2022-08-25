@@ -11,8 +11,12 @@ import Combine
 class HomeViewController: UIViewController {
     
     lazy var collectionView: UICollectionView = {
-        let v = UICollectionView(frame: view.bounds, collectionViewLayout: .init())
-        v.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.bounds.width, height: 150)
+        layout.minimumInteritemSpacing = 10
+        let v = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.backgroundColor = .systemGroupedBackground
         return v
     }()
     
@@ -29,8 +33,10 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "NYC Schools"
         view.addSubview(collectionView)
+        collectionView.register(SchoolCollectionViewCell.self, forCellWithReuseIdentifier: SchoolCollectionViewCell.reuseID)
         collectionView.delegate = self
         collectionView.dataSource = self
+        
     }
     
     private func setupObservers() {
@@ -63,12 +69,8 @@ extension HomeViewController: UICollectionViewDelegate {
 // MARK: - CollectionView Datasource
 extension HomeViewController: UICollectionViewDataSource {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.schools.count
+        return viewModel.schools.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

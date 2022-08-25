@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct WrappedData: Codable {
+    var schools: [School]?
+}
+
 class DataFetcher {
     
     static let shared = DataFetcher()
@@ -23,7 +27,20 @@ class DataFetcher {
             }
             if let data = data {
                 do {
-                    let schools = try JSONDecoder().decode([School].self, from: data)
+                    // Usually I would do it this way but there is some error with getting the fields
+//                    let schools = try JSONDecoder().decode([School].self, from: data)
+                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [[String:Any]] else {
+                        completion([], nil)
+                        return
+                    }
+                    var schools: [School] = []
+                    for school in json {
+                        let name = school["school_name"] as? String
+                        let overview = school["overview_paragraph"] as? String
+                        let dbn = school["dbn"] as! String
+                        let school = School(name: name, overviewParagraph: overview, id: dbn)
+                        schools.append(school)
+                    }
                     completion(schools, nil)
                 } catch {
                     completion([], error)

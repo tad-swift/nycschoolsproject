@@ -22,6 +22,7 @@ class SchoolCollectionViewCell: UICollectionViewCell {
     private let descLbl: UILabel = {
         let v = UILabel()
         v.translatesAutoresizingMaskIntoConstraints = false
+        v.numberOfLines = 0
         return v
     }()
     
@@ -43,7 +44,6 @@ class SchoolCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        observers.removeAll()
     }
     
     private func setupViews() {

@@ -19,13 +19,11 @@ final class HomeViewModel {
     func fetchNextSchools() {
         let query = SchoolQuery()
             .fetchSchools()
-            .limitTo(10)
-            .withOffset(schools.count)
         DataFetcher.shared.getSchools(query: query) { [weak self] schools, error in
             if let error = error {
                 self?.errorMessage = error.localizedDescription
             }
-            self?.schools += schools
+            self?.schools = schools
         }
     }
     

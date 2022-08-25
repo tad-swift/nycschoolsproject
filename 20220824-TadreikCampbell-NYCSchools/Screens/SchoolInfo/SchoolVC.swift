@@ -38,7 +38,12 @@ final class SchoolVC: UIViewController {
     }
     
     private func setupViews() {
+        view.backgroundColor = .systemBackground
+        title = viewModel.schoolName
         
+        NSLayoutConstraint.activate([
+            
+        ])
     }
     
     private func setupObservers() {

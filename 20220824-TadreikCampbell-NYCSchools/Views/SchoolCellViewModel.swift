@@ -13,8 +13,8 @@ class SchoolCellViewModel {
     @Published var schoolDescription = ""
     
     init(school: School) {
-        self.schoolName = school.name
-        self.schoolDescription = school.overviewParagraph
+        self.schoolName = school.name ?? ""
+        self.schoolDescription = school.overviewParagraph ?? ""
     }
     
 }

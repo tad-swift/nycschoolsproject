@@ -7,10 +7,10 @@
 
 import Foundation
 
-class School: Codable {
+struct School: Codable {
     
-    let name: String
-    let overviewParagraph: String
+    let name: String?
+    let overviewParagraph: String?
     let id: String
     
     enum CodingKeys: String, CodingKey {

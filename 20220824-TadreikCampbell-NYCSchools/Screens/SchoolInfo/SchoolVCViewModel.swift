@@ -16,7 +16,7 @@ class SchoolVCViewModel {
     
     init(school: School) {
         self.school = school
-        self.schoolName = school.name
+        self.schoolName = school.name ?? ""
     }
     
     // func to fetch scores

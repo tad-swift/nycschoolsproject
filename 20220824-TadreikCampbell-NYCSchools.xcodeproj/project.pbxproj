@@ -16,6 +16,20 @@
 		455EAEB128B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEB028B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift */; };
 		455EAEBB28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEBA28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITests.swift */; };
 		455EAEBD28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEBC28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITestsLaunchTests.swift */; };
+		455EAED128B6FBDF004231E9 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAED028B6FBDF004231E9 /* School.swift */; };
+		455EAED328B6FBFD004231E9 /* SATScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAED228B6FBFD004231E9 /* SATScore.swift */; };
+		455EAED728B6FD8E004231E9 /* ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAED628B6FD8E004231E9 /* ModelsTests.swift */; };
+		455EAED928B72D18004231E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAED828B72D18004231E9 /* Extensions.swift */; };
+		455EAEDB28B7334A004231E9 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEDA28B7334A004231E9 /* DataFetcher.swift */; };
+		455EAEDD28B73485004231E9 /* SchoolQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEDC28B73485004231E9 /* SchoolQueryBuilder.swift */; };
+		455EAEDF28B7AAF6004231E9 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEDE28B7AAF6004231E9 /* Navigator.swift */; };
+		455EAEE128B7AB48004231E9 /* SchoolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEE028B7AB48004231E9 /* SchoolVC.swift */; };
+		455EAEE328B7AB66004231E9 /* SchoolVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEE228B7AB66004231E9 /* SchoolVCViewModel.swift */; };
+		455EAEE528B7AB80004231E9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEE428B7AB80004231E9 /* HomeViewModel.swift */; };
+		455EAEE828B7ACF2004231E9 /* SchoolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEE728B7ACF2004231E9 /* SchoolCollectionViewCell.swift */; };
+		455EAEEA28B7AD2C004231E9 /* SchoolCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEE928B7AD2C004231E9 /* SchoolCellViewModel.swift */; };
+		455EAEEC28B7B529004231E9 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEEB28B7B529004231E9 /* APIKeys.swift */; };
+		455EAEF028B7C7FD004231E9 /* Query+APIDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEEF28B7C7FD004231E9 /* Query+APIDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		455EAEB628B6FAE6004231E9 /* 20220824-TadreikCampbell-NYCSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20220824-TadreikCampbell-NYCSchoolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		455EAEBA28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0220824_TadreikCampbell_NYCSchoolsUITests.swift; sourceTree = "<group>"; };
 		455EAEBC28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0220824_TadreikCampbell_NYCSchoolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		455EAED028B6FBDF004231E9 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		455EAED228B6FBFD004231E9 /* SATScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATScore.swift; sourceTree = "<group>"; };
+		455EAED628B6FD8E004231E9 /* ModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsTests.swift; sourceTree = "<group>"; };
+		455EAED828B72D18004231E9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		455EAEDA28B7334A004231E9 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		455EAEDC28B73485004231E9 /* SchoolQueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolQueryBuilder.swift; sourceTree = "<group>"; };
+		455EAEDE28B7AAF6004231E9 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		455EAEE028B7AB48004231E9 /* SchoolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolVC.swift; sourceTree = "<group>"; };
+		455EAEE228B7AB66004231E9 /* SchoolVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolVCViewModel.swift; sourceTree = "<group>"; };
+		455EAEE428B7AB80004231E9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		455EAEE728B7ACF2004231E9 /* SchoolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCollectionViewCell.swift; sourceTree = "<group>"; };
+		455EAEE928B7AD2C004231E9 /* SchoolCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCellViewModel.swift; sourceTree = "<group>"; };
+		455EAEEB28B7B529004231E9 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		455EAEEF28B7C7FD004231E9 /* Query+APIDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query+APIDefaults.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +129,7 @@
 			children = (
 				455EAECB28B6FB3E004231E9 /* Main */,
 				455EAECA28B6FB30004231E9 /* Screens */,
+				455EAEE628B7ACE3004231E9 /* Views */,
 				455EAECE28B6FB91004231E9 /* Models */,
 				455EAECF28B6FBAB004231E9 /* Network */,
 				455EAEC928B6FB28004231E9 /* Extensions */,
@@ -116,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				455EAEB028B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift */,
+				455EAED628B6FD8E004231E9 /* ModelsTests.swift */,
 			);
 			path = "20220824-TadreikCampbell-NYCSchoolsTests";
 			sourceTree = "<group>";
@@ -132,6 +162,7 @@
 		455EAEC928B6FB28004231E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				455EAED828B72D18004231E9 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,6 +181,7 @@
 			children = (
 				455EAE9928B6FAE5004231E9 /* AppDelegate.swift */,
 				455EAE9B28B6FAE5004231E9 /* SceneDelegate.swift */,
+				455EAEDE28B7AAF6004231E9 /* Navigator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -158,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				455EAE9D28B6FAE5004231E9 /* HomeViewController.swift */,
+				455EAEE428B7AB80004231E9 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -165,6 +198,8 @@
 		455EAECD28B6FB62004231E9 /* SchoolInfo */ = {
 			isa = PBXGroup;
 			children = (
+				455EAEE028B7AB48004231E9 /* SchoolVC.swift */,
+				455EAEE228B7AB66004231E9 /* SchoolVCViewModel.swift */,
 			);
 			path = SchoolInfo;
 			sourceTree = "<group>";
@@ -172,6 +207,8 @@
 		455EAECE28B6FB91004231E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				455EAED028B6FBDF004231E9 /* School.swift */,
+				455EAED228B6FBFD004231E9 /* SATScore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,8 +216,21 @@
 		455EAECF28B6FBAB004231E9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				455EAEDA28B7334A004231E9 /* DataFetcher.swift */,
+				455EAEDC28B73485004231E9 /* SchoolQueryBuilder.swift */,
+				455EAEEB28B7B529004231E9 /* APIKeys.swift */,
+				455EAEEF28B7C7FD004231E9 /* Query+APIDefaults.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		455EAEE628B7ACE3004231E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				455EAEE728B7ACF2004231E9 /* SchoolCollectionViewCell.swift */,
+				455EAEE928B7AD2C004231E9 /* SchoolCellViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,8 +365,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				455EAE9E28B6FAE5004231E9 /* HomeViewController.swift in Sources */,
+				455EAEDB28B7334A004231E9 /* DataFetcher.swift in Sources */,
+				455EAEDF28B7AAF6004231E9 /* Navigator.swift in Sources */,
+				455EAEE328B7AB66004231E9 /* SchoolVCViewModel.swift in Sources */,
+				455EAEDD28B73485004231E9 /* SchoolQueryBuilder.swift in Sources */,
+				455EAEE128B7AB48004231E9 /* SchoolVC.swift in Sources */,
+				455EAEEC28B7B529004231E9 /* APIKeys.swift in Sources */,
+				455EAED928B72D18004231E9 /* Extensions.swift in Sources */,
+				455EAEE528B7AB80004231E9 /* HomeViewModel.swift in Sources */,
 				455EAE9A28B6FAE5004231E9 /* AppDelegate.swift in Sources */,
 				455EAE9C28B6FAE5004231E9 /* SceneDelegate.swift in Sources */,
+				455EAED328B6FBFD004231E9 /* SATScore.swift in Sources */,
+				455EAED128B6FBDF004231E9 /* School.swift in Sources */,
+				455EAEEA28B7AD2C004231E9 /* SchoolCellViewModel.swift in Sources */,
+				455EAEF028B7C7FD004231E9 /* Query+APIDefaults.swift in Sources */,
+				455EAEE828B7ACF2004231E9 /* SchoolCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				455EAEB128B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift in Sources */,
+				455EAED728B6FD8E004231E9 /* ModelsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

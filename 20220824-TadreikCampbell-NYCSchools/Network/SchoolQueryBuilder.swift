@@ -33,7 +33,7 @@ class SchoolQuery: Query {
     }
     
     // Started building an API for fetching data,
-    // then realized the json dataset doesn't support the queries
+    // then realized the standalone json dataset doesn't support the queries
     
     // This makes it extremely easy to build queries
     // SchoolQuery().fetchSchools().offset(array.count).limit(10)

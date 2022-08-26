@@ -8,11 +8,6 @@
 import XCTest
 @testable import _0220824_TadreikCampbell_NYCSchools
 
-/*
- This is testing that the models decode properly.
- This is important because when we change some properties in the
- model or on the backend we want to make sure that it still works
- */
 
 class ModelsTests: XCTestCase {
     

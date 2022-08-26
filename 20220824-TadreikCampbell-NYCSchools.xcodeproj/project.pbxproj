@@ -13,7 +13,6 @@
 		455EAEA128B6FAE5004231E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455EAE9F28B6FAE5004231E9 /* Main.storyboard */; };
 		455EAEA328B6FAE6004231E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455EAEA228B6FAE6004231E9 /* Assets.xcassets */; };
 		455EAEA628B6FAE6004231E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455EAEA428B6FAE6004231E9 /* LaunchScreen.storyboard */; };
-		455EAEB128B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEB028B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift */; };
 		455EAEBB28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEBA28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITests.swift */; };
 		455EAEBD28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEBC28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITestsLaunchTests.swift */; };
 		455EAED128B6FBDF004231E9 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAED028B6FBDF004231E9 /* School.swift */; };
@@ -32,6 +31,9 @@
 		455EAEF028B7C7FD004231E9 /* Query+APIDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEEF28B7C7FD004231E9 /* Query+APIDefaults.swift */; };
 		455EAEF228B825FF004231E9 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF128B825FF004231E9 /* ScoreCell.swift */; };
 		455EAEF428B82654004231E9 /* ScoreCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF328B82654004231E9 /* ScoreCellViewModel.swift */; };
+		455EAEF628B85099004231E9 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF528B85099004231E9 /* HomeViewModelTests.swift */; };
+		455EAEF828B850A3004231E9 /* SchoolViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF728B850A3004231E9 /* SchoolViewModelTests.swift */; };
+		455EAEFA28B850DF004231E9 /* MockDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF928B850DF004231E9 /* MockDataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,6 @@
 		455EAEA528B6FAE6004231E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		455EAEA728B6FAE6004231E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		455EAEAC28B6FAE6004231E9 /* 20220824-TadreikCampbell-NYCSchoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20220824-TadreikCampbell-NYCSchoolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		455EAEB028B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0220824_TadreikCampbell_NYCSchoolsTests.swift; sourceTree = "<group>"; };
 		455EAEB628B6FAE6004231E9 /* 20220824-TadreikCampbell-NYCSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20220824-TadreikCampbell-NYCSchoolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		455EAEBA28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0220824_TadreikCampbell_NYCSchoolsUITests.swift; sourceTree = "<group>"; };
 		455EAEBC28B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0220824_TadreikCampbell_NYCSchoolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -81,6 +82,9 @@
 		455EAEEF28B7C7FD004231E9 /* Query+APIDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Query+APIDefaults.swift"; sourceTree = "<group>"; };
 		455EAEF128B825FF004231E9 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		455EAEF328B82654004231E9 /* ScoreCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCellViewModel.swift; sourceTree = "<group>"; };
+		455EAEF528B85099004231E9 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		455EAEF728B850A3004231E9 /* SchoolViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewModelTests.swift; sourceTree = "<group>"; };
+		455EAEF928B850DF004231E9 /* MockDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +152,10 @@
 		455EAEAF28B6FAE6004231E9 /* 20220824-TadreikCampbell-NYCSchoolsTests */ = {
 			isa = PBXGroup;
 			children = (
-				455EAEB028B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift */,
+				455EAEF528B85099004231E9 /* HomeViewModelTests.swift */,
+				455EAEF728B850A3004231E9 /* SchoolViewModelTests.swift */,
 				455EAED628B6FD8E004231E9 /* ModelsTests.swift */,
+				455EAEF928B850DF004231E9 /* MockDataFetcher.swift */,
 			);
 			path = "20220824-TadreikCampbell-NYCSchoolsTests";
 			sourceTree = "<group>";
@@ -395,8 +401,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				455EAEB128B6FAE6004231E9 /* _0220824_TadreikCampbell_NYCSchoolsTests.swift in Sources */,
+				455EAEFA28B850DF004231E9 /* MockDataFetcher.swift in Sources */,
+				455EAEF828B850A3004231E9 /* SchoolViewModelTests.swift in Sources */,
 				455EAED728B6FD8E004231E9 /* ModelsTests.swift in Sources */,
+				455EAEF628B85099004231E9 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

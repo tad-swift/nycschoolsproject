@@ -34,6 +34,7 @@
 		455EAEF628B85099004231E9 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF528B85099004231E9 /* HomeViewModelTests.swift */; };
 		455EAEF828B850A3004231E9 /* SchoolViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF728B850A3004231E9 /* SchoolViewModelTests.swift */; };
 		455EAEFA28B850DF004231E9 /* MockDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EAEF928B850DF004231E9 /* MockDataFetcher.swift */; };
+		4579D2CB28B91DE700D64D90 /* HomeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579D2CA28B91DE700D64D90 /* HomeSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		455EAEF528B85099004231E9 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		455EAEF728B850A3004231E9 /* SchoolViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewModelTests.swift; sourceTree = "<group>"; };
 		455EAEF928B850DF004231E9 /* MockDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataFetcher.swift; sourceTree = "<group>"; };
+		4579D2CA28B91DE700D64D90 /* HomeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			children = (
 				455EAE9D28B6FAE5004231E9 /* HomeViewController.swift */,
 				455EAEE428B7AB80004231E9 /* HomeViewModel.swift */,
+				4579D2CA28B91DE700D64D90 /* HomeSearchController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				455EAEF428B82654004231E9 /* ScoreCellViewModel.swift in Sources */,
 				455EAEE328B7AB66004231E9 /* SchoolVCViewModel.swift in Sources */,
 				455EAEDD28B73485004231E9 /* SchoolQueryBuilder.swift in Sources */,
+				4579D2CB28B91DE700D64D90 /* HomeSearchController.swift in Sources */,
 				455EAEE128B7AB48004231E9 /* SchoolVC.swift in Sources */,
 				455EAEF228B825FF004231E9 /* ScoreCell.swift in Sources */,
 				455EAEEC28B7B529004231E9 /* APIKeys.swift in Sources */,

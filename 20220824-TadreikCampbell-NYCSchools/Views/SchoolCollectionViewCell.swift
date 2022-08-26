@@ -19,7 +19,7 @@ class SchoolCollectionViewCell: UICollectionViewCell {
         return v
     }()
     
-    private let descLbl: UILabel = {
+    let descLbl: UILabel = {
         let v = UILabel()
         v.translatesAutoresizingMaskIntoConstraints = false
         v.numberOfLines = 0

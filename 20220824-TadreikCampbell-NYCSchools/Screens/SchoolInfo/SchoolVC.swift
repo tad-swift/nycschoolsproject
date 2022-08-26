@@ -10,11 +10,19 @@ import Combine
 
 final class SchoolVC: UIViewController {
     
+    let schoolNameLbl: UILabel = {
+        let v = UILabel()
+        v.font = .systemFont(ofSize: 24, weight: .medium)
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.numberOfLines = 0
+        return v
+    }()
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: view.bounds.width, height: 100)
         layout.minimumInteritemSpacing = 10
-        let v = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        let v = UICollectionView(frame: .zero, collectionViewLayout: layout)
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
@@ -23,7 +31,7 @@ final class SchoolVC: UIViewController {
     var observers: Set<AnyCancellable> = []
     
     init(school: School) {
-        self.viewModel = SchoolVCViewModel(school: school)
+        self.viewModel = SchoolVCViewModel(school: school, dataFetcher: SchoolDataFetcher.shared)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -39,9 +47,24 @@ final class SchoolVC: UIViewController {
     
     private func setupViews() {
         view.backgroundColor = .systemBackground
-        view.addSubview(collectionView)
+        schoolNameLbl.text = viewModel.school.name ?? "No name"
+        view.addSubviews(schoolNameLbl, collectionView)
         collectionView.register(ScoreCell.self, forCellWithReuseIdentifier: ScoreCell.reuseID)
         collectionView.dataSource = self
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            schoolNameLbl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            schoolNameLbl.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            schoolNameLbl.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            
+            collectionView.topAnchor.constraint(equalTo: schoolNameLbl.bottomAnchor, constant: 8),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     private func setupObservers() {

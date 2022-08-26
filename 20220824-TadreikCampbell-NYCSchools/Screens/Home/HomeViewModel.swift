@@ -12,6 +12,7 @@ final class HomeViewModel {
     var dataFetcher: DataFetcher
     
     @Published var schools: [School] = []
+    @Published var visibleSchools: [School] = []
     @Published var errorMessage = ""
     
     init(dataFetcher: DataFetcher) {
@@ -23,10 +24,23 @@ final class HomeViewModel {
         let query = SchoolQuery()
             .fetchSchools()
         dataFetcher.getSchools(query: query) { [weak self] schools, error in
+            guard let self = self else { return }
             if let error = error {
-                self?.errorMessage = error.localizedDescription
+                self.errorMessage = error.localizedDescription
             }
-            self?.schools = schools
+            self.schools = schools
+            self.visibleSchools = self.schools
+        }
+    }
+    
+    func updateVisibleSchools(searchText: String) {
+        if searchText.count == 0 {
+            visibleSchools = schools
+        }
+        else {
+            visibleSchools = schools.filter {
+                return $0.name!.lowercased().contains(searchText.lowercased())
+            }
         }
     }
     

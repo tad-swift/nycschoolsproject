@@ -7,9 +7,14 @@
 
 import Foundation
 
-class DataFetcher {
+protocol DataFetcher {
+    func getSchools<AnyQuery: Query>(query: AnyQuery, completion: @escaping ([School], Error?) -> Void)
+    func getScores<AnyQuery: Query>(query: AnyQuery, completion: @escaping ([SATScore], Error?) -> Void)
+}
+
+class SchoolDataFetcher: DataFetcher {
     
-    static let shared = DataFetcher()
+    static let shared = SchoolDataFetcher()
     
     private init() { }
     

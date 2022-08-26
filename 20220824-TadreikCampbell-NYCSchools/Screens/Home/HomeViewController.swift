@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         return v
     }()
     
-    let viewModel = HomeViewModel()
+    let viewModel = HomeViewModel(dataFetcher: SchoolDataFetcher.shared)
     var observers: Set<AnyCancellable> = []
     
     override func viewDidLoad() {

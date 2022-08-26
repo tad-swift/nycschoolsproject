@@ -9,17 +9,20 @@ import Foundation
 
 final class HomeViewModel {
     
+    var dataFetcher: DataFetcher
+    
     @Published var schools: [School] = []
     @Published var errorMessage = ""
     
-    init() {
+    init(dataFetcher: DataFetcher) {
+        self.dataFetcher = dataFetcher
         fetchNextSchools()
     }
     
     func fetchNextSchools() {
         let query = SchoolQuery()
             .fetchSchools()
-        DataFetcher.shared.getSchools(query: query) { [weak self] schools, error in
+        dataFetcher.getSchools(query: query) { [weak self] schools, error in
             if let error = error {
                 self?.errorMessage = error.localizedDescription
             }

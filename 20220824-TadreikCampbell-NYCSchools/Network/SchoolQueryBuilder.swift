@@ -9,13 +9,13 @@ import Foundation
 
 class SchoolQuery: Query {
     var queryItems: Set<URLQueryItem>?
-    var endpoint = APIDefaults.schoolEndpoint
+    var endpoint = Endpoints.schoolEndpoint
     
     var url: URL {
         var components = URLComponents()
         components.scheme = "https"
         components.host = APIDefaults.NYCSchoolAPIBaseDomain
-        components.path = endpoint
+        components.path = endpoint.rawValue
         if let queryItems = queryItems {
             components.queryItems = Array(queryItems)
         }
@@ -23,14 +23,21 @@ class SchoolQuery: Query {
     }
     
     func fetchSchools() -> Self {
-        endpoint = APIDefaults.schoolEndpoint
+        endpoint = Endpoints.schoolEndpoint
         return self
     }
     
     func fetchScores() -> Self {
-        endpoint = APIDefaults.scoresEndpoint
+        endpoint = Endpoints.scoresEndpoint
         return self
     }
+    
+    // Started building an API for fetching data,
+    // then realized the json dataset doesn't support the queries
+    
+    // This makes it extremely easy to build queries
+    // SchoolQuery().fetchSchools().offset(array.count).limit(10)
+    // and of course I could add functions for more params
     
     func withDBN(_ value: String) -> Self {
         if self.queryItems == nil {

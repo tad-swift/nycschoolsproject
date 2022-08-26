@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct WrappedData: Codable {
-    var schools: [School]?
-}
-
 class DataFetcher {
     
     static let shared = DataFetcher()

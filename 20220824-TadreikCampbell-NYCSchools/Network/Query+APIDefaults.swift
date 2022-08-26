@@ -13,6 +13,9 @@ protocol Query {
 
 struct APIDefaults {
     static let NYCSchoolAPIBaseDomain = "data.cityofnewyork.us"
-    static let schoolEndpoint = "/resource/s3k6-pzi2.json"
-    static let scoresEndpoint = "/resource/f9bf-2cp4.json"
+}
+
+enum Endpoints: String {
+    case schoolEndpoint = "/resource/s3k6-pzi2.json"
+    case scoresEndpoint = "/resource/f9bf-2cp4.json"
 }

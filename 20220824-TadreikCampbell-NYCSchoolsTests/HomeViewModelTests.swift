@@ -25,7 +25,7 @@ class HomeViewModelTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testDidFetchData() throws {
+    func testFetchNextSchools() throws {
         XCTAssert(!vm.schools.isEmpty)
     }
     

@@ -29,7 +29,7 @@ class SchoolViewModelTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testDidFetchData() throws {
+    func testGetScores() throws {
         XCTAssert(!vm.scores.isEmpty)
     }
     

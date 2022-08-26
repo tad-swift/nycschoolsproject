@@ -73,19 +73,19 @@ class ScoreCell: UICollectionViewCell {
         viewModel.$reading
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
-                self?.readingLbl.text = $0
+                self?.readingLbl.text = "Reading: \($0)"
             }
             .store(in: &observers)
         viewModel.$writing
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
-                self?.writingLbl.text = $0
+                self?.writingLbl.text = "Writing: \($0)"
             }
             .store(in: &observers)
         viewModel.$math
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
-                self?.mathLbl.text = $0
+                self?.mathLbl.text = "Math: \($0)"
             }
             .store(in: &observers)
     }

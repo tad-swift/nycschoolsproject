@@ -8,8 +8,6 @@
 import UIKit
 import Combine
 
-// Demo how to integrate swiftUI into UIKit project
-
 final class SchoolVC: UIViewController {
     
     lazy var collectionView: UICollectionView = {
@@ -18,7 +16,6 @@ final class SchoolVC: UIViewController {
         layout.minimumInteritemSpacing = 10
         let v = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .systemGroupedBackground
         return v
     }()
     
@@ -42,7 +39,6 @@ final class SchoolVC: UIViewController {
     
     private func setupViews() {
         view.backgroundColor = .systemBackground
-        title = "Scores"
         view.addSubview(collectionView)
         collectionView.register(ScoreCell.self, forCellWithReuseIdentifier: ScoreCell.reuseID)
         collectionView.dataSource = self
@@ -51,8 +47,13 @@ final class SchoolVC: UIViewController {
     private func setupObservers() {
         viewModel.$scores
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
+            .sink { [weak self] scores in
                 self?.collectionView.reloadData()
+                if scores.isEmpty {
+                    self?.title = "No scores available"
+                } else {
+                    self?.title = "Scores"
+                }
             }
             .store(in: &observers)
     }

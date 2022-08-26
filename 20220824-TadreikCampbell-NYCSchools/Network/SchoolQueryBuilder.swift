@@ -15,7 +15,7 @@ class SchoolQuery: Query {
         var components = URLComponents()
         components.scheme = "https"
         components.host = APIDefaults.NYCSchoolAPIBaseDomain
-        components.path = APIDefaults.schoolEndpoint
+        components.path = endpoint
         if let queryItems = queryItems {
             components.queryItems = Array(queryItems)
         }
@@ -27,7 +27,7 @@ class SchoolQuery: Query {
         return self
     }
     
-    func fetchScores(forSchoolWithDBN schoolDBN: String) -> Self {
+    func fetchScores() -> Self {
         endpoint = APIDefaults.scoresEndpoint
         return self
     }

@@ -22,14 +22,13 @@ class SchoolVCViewModel {
     
     // func to fetch scores
     func getScores() {
-        let query = SchoolQuery().fetchScores(forSchoolWithDBN: school.id)
+        let query = SchoolQuery().fetchScores()
         DataFetcher.shared.getScores(query: query) { [weak self] fetchedScores, error in
             guard let self = self else { return }
             if let error = error {
                 self.errorMessage = error.localizedDescription
             }
             self.scores = fetchedScores.filter { $0.id == self.school.id }
-            print(self.scores)
         }
     }
     
